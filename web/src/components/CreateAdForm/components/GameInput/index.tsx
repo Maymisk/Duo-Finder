@@ -1,7 +1,7 @@
 import * as Select from '@radix-ui/react-select';
 import { SelectProps } from '@radix-ui/react-select';
 
-import { CaretDown, CaretUp, Check } from 'phosphor-react';
+import { CaretDown, Check } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import { api } from '../../../../services/api';
 import {

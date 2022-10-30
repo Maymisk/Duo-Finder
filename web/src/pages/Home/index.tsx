@@ -1,13 +1,12 @@
 import { GameCard } from './components/GameCard';
 import { GameCarousel, HomeContainer } from './styes';
 
-import { CreateAdBanner } from './components/CreateAdBanner';
-import { CreateAdModal } from '../../components/CreateAdModal';
 import { useEffect, useState } from 'react';
+import { CreateAdModal } from '../../components/CreateAdModal';
 import { api } from '../../services/api';
-import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
 import { withAuthRequired } from '../../utils/withAuthRequired';
+import { CreateAdBanner } from './components/CreateAdBanner';
+import { UserCard } from './components/UserCard';
 
 interface IGame {
 	id: string;
@@ -38,6 +37,10 @@ function HomeComponent() {
 
 	return (
 		<HomeContainer>
+			<img src="/Logo.svg" alt="Duo finder logo" />
+
+			<UserCard />
+
 			<h1>
 				Seu <span>duo</span> está aqui.
 			</h1>

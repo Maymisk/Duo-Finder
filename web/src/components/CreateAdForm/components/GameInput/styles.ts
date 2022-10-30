@@ -39,6 +39,10 @@ export const ItemsContainer = styled(Select.Content)`
 	background: ${props => props.theme.input};
 
 	padding: 0.5rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 `;
 
 export const Item = styled(Select.Item)`

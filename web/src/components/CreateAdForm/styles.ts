@@ -8,6 +8,8 @@ export const Container = styled.form`
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
+
+	position: relative;
 `;
 
 export const LabelContainer = styled.div`

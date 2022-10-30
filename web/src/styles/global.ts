@@ -24,10 +24,6 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        img {
-            margin-top: 5rem;
-        }
     }
 
     a {
