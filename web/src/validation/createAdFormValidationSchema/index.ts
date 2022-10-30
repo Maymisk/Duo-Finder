@@ -2,7 +2,7 @@ import * as yup from 'yup';
 
 const discordRegex = new RegExp('^.{3,32}#[0-9]{4}$');
 const weekDaysRegex = new RegExp('[0-6]{1}');
-const hourRegex = new RegExp('^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$');
+const hourRegex = new RegExp('^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$');
 
 export const schema = yup.object({
 	gameId: yup.string().required('Selecione o jogo'),

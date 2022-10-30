@@ -5,6 +5,9 @@ import { CreateAdBanner } from './components/CreateAdBanner';
 import { CreateAdModal } from '../../components/CreateAdModal';
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
+import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom';
+import { withAuthRequired } from '../../utils/withAuthRequired';
 
 interface IGame {
 	id: string;
@@ -15,7 +18,7 @@ interface IGame {
 	};
 }
 
-export function Home() {
+function HomeComponent() {
 	const [games, setGames] = useState<IGame[]>([]);
 	const [createAdModalIsOpen, setCreateAdModalIsOpen] = useState(false);
 
@@ -62,3 +65,5 @@ export function Home() {
 		</HomeContainer>
 	);
 }
+
+export const Home = withAuthRequired(HomeComponent);

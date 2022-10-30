@@ -1,9 +1,11 @@
 import { Input, LabelContainer } from '../../styles';
 import { Container } from './styles';
 import { useFormContext } from 'react-hook-form';
+import { useAuth } from '../../../../contexts/AuthContext';
 
 export function YearsAndDiscordInputs() {
 	const { register } = useFormContext();
+	const { user } = useAuth();
 
 	return (
 		<Container>
@@ -20,12 +22,14 @@ export function YearsAndDiscordInputs() {
 			</LabelContainer>
 
 			<LabelContainer>
-				<label htmlFor="discord">Qual seu discord?</label>
+				<label htmlFor="discord">Seu discord:</label>
 				<Input
 					id="discord"
 					placeholder="Usuario#0000"
 					autoComplete="off"
-					{...register('discord')}
+					{...register('discord', {
+						value: user.username + '#' + user.discriminator,
+					})}
 				/>
 			</LabelContainer>
 		</Container>
