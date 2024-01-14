@@ -52,7 +52,7 @@ function HomeComponent() {
 							key={game.id}
 							backgroundImageUrl={game.bannerUrl}
 							adsAmount={game._count.ads}
-							gameTitle={game.title}
+							game={{ id: game.id, title: game.title }}
 						/>
 					);
 				})}

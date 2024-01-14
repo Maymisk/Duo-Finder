@@ -4,6 +4,10 @@ import { UserCardContainer, UserInfoContainer } from './styles';
 export function UserCard() {
 	const { user } = useAuth();
 
+	if (!user) {
+		return null;
+	}
+
 	const avatarUrl = `${import.meta.env.VITE_DISCORD_CDN_BASE_URL}/avatars/${
 		user.id
 	}/${user.avatar}.png`;

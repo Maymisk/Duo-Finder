@@ -2,19 +2,25 @@ import { Card, CardOverlay } from './styles';
 
 interface IGameCardProps {
 	backgroundImageUrl: string;
-	gameTitle: string;
 	adsAmount: number | string;
+	game: {
+		id: string;
+		title: string;
+	};
 }
 
 export function GameCard({
 	backgroundImageUrl,
-	gameTitle,
+	game,
 	adsAmount,
 }: IGameCardProps) {
 	return (
-		<Card backgroundImageUrl={backgroundImageUrl}>
+		<Card
+			backgroundimageurl={backgroundImageUrl}
+			to={`/ads/game/${game.id}`}
+		>
 			<CardOverlay>
-				<h1>{gameTitle}</h1>
+				<h1>{game.title}</h1>
 				<p>{adsAmount} anúncios</p>
 			</CardOverlay>
 		</Card>

@@ -1,16 +1,17 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 interface ICardProps {
-	backgroundImageUrl: string;
+	backgroundimageurl: string;
 }
 
-export const Card = styled.div<ICardProps>`
+export const Card = styled(NavLink)<ICardProps>`
 	width: 11.25rem;
 	height: 15rem;
 
 	position: relative;
 
-	background: url(${props => props.backgroundImageUrl}) no-repeat center/cover;
+	background: url(${props => props.backgroundimageurl}) no-repeat center/cover;
 
 	border-radius: 8px;
 `;

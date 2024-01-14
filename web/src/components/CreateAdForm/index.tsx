@@ -28,6 +28,9 @@ interface ICreateAdFormProps {
 export function CreateAdForm({ onClose }: ICreateAdFormProps) {
 	const adForm = useForm<ICreateAdFormData>({
 		resolver: yupResolver(schema),
+		defaultValues: {
+			useVoiceChannel: false,
+		},
 	});
 
 	async function handleFormSubmission(data: ICreateAdFormData) {
@@ -41,7 +44,6 @@ export function CreateAdForm({ onClose }: ICreateAdFormProps) {
 			hourEnd,
 			useVoiceChannel,
 		} = data;
-
 		const numberWeekDays = weekDays.map(Number);
 
 		await api.post(`/ads/game/${gameId}`, {
