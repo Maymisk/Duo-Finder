@@ -1,30 +1,49 @@
-# Duo Finder 👥
+<div align="center">
+    <img width="400px" src='https://media.tenor.com/dw9EmFbwS2gAAAAM/da.gif' />
+</div>
 
-This project enables users to find gaming partners for their favorite games by implementing an ad system.
-## My journey 🏃‍♂️
+# 🎮 Duo Finder
 
-During a bootcamp event, I undertook the development of this full-stack project, which helped improve my coding skills. A notable challenge within the project was the implementation of OAuth2 from scratch, particularly focusing on Discord's authentication flow. This marked one of my initial exposures to OAuth2 and its workings.
+**Connect with gaming partners seamlessly using Duo Finder — a full-stack matchmaking platform powered by Discord OAuth2.**
 
-Additionally, the event covered fundamental aspects of mobile development using React Native. While I didn't prioritize absorbing this knowledge, it was nice to see this other branch of development. 
-## Technologies ✨
+## 🧠 Project Overview
 
-- **Front End**
-    - React ⚛
-    - Typescript 🔹
-    - Vite ⚡
-    - Styled Components 💅
-    - React Router DOM 🗺
-    - React Hook Form 📃
-    - Yup ✅
-    - Axios 📄
-    - Radix-UI
+Duo Finder is a matchmaking platform designed to help gamers find partners for their favorite games. Built during a bootcamp event, this project showcases a full-stack implementation, integrating Discord's OAuth2 for authentication and providing a responsive user interface for both web and mobile platforms.
 
-- **Back End**
-    - Express
-    - SQLite 📀
-    - Prisma 🔺
+## 🚀 Features
 
+- **Discord Authentication:** Secure login using Discord's OAuth2 protocol.
+- **Game Listings:** Browse and create advertisements to find gaming partners.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Form Validation:** Robust form handling with real-time validation feedback.
 
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **React** with **TypeScript**
+- **Vite** for fast development builds
+- **Styled Components** for modular CSS
+- **React Router DOM** for client-side routing
+- **React Hook Form** and **Yup** for form management and validation
+- **Axios** for HTTP requests
+- **Radix UI** for accessible UI components
+
+### Backend
+
+- **Node.js** with **Express**
+- **SQLite** as the database
+- **Prisma** as the ORM for database interactions
+
+### Mobile
+
+- **React Native** for cross-platform mobile development
+
+## 📦 Project Structure
+
+- **/web**: Contains the React web application.
+- **/server**: Houses the Express backend API.
+- **/mobile**: Includes the React Native mobile application.
 
 ## Running locally 💻
 
@@ -83,10 +102,7 @@ or
 npm install
 ```
 
-In order to test the discord OAuth2, you'll need to set some environment variables as per the [**.env.example file.**](/web/.env.example)
-
-
-Once you've set them (or not),  run the "dev" script and [**access the 5173 localhost port!**](http://localhost:5173)
+Run the "dev" script and [**access the 5173 localhost port!**](http://localhost:5173)
 
 ```bash
 yarn dev
@@ -96,10 +112,7 @@ or
 ```bash
 npm run dev
 ```
-## Features 💪 
 
-- Authentication using Discord OAuth2
-- Create and read operations for ads (front and back end)
 ## Screenshots 📷
 
 ![App Screenshot](/.github/assets/screenshot1.png)
@@ -107,9 +120,3 @@ npm run dev
 ![App Screenshot](/.github/assets/screenshot2.png)
 
 
-## Improvements 🔧
-
-- Style the ad listing page
-- Create a carousel for the games in the home page
-- Create a sign out functionality
-- Make the layout responsive
